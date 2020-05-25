@@ -1,6 +1,6 @@
 # API
 - [Authorization](#authorization)
-- [API](#api)
+- [Requests](#requests)
 - [Invalid Requests](#invalid-requests)
 ##
 ## Authorization
@@ -10,7 +10,7 @@
 - On invalid authentication a response with a 401 status (Unauthorized) is sent.
 - **All** authenticated requests return a 200 (OK) status (barring a server error or requesting unsupported methods). If the user is not authorized to view the specified endpoint or result an empty body is returned.
 ##
-## API
+## Requests
 All requests that send data must have `Content-Type: application/json` header
 #### `/api/monitoredEndpoints`	
 - `GET`
@@ -18,8 +18,8 @@ All requests that send data must have `Content-Type: application/json` header
 - `POST`
     - Creates a new endpoint from passed JSON containing `url`. User can optionally specify `name` and/or `monitoringInterval`. Other `MonitoredEndpoint` attributes are ignored
         - Examples:
-            - `{url: "http://google.com"}`
-            - `{url: "http://google.com", name: "google", monitoringInterval: 1}`
+            - `{"url":"http://google.com"}`
+            - `{"url":"http://google.com","name":"google","monitoringInterval":1}`
        - `id` generated automatically
         - `dateOfCreation` generated automatically
         - `dateOfLastCheck` modified by the application only
