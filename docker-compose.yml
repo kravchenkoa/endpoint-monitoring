@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  mysql-docker-container:
+    ports:
+      - 3306:3306
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=endpoint
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - /data/mysql
+
+  endpoint-monitoring-app:
+    build: .
+    volumes:
+      - /data/spring-boot-app
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql-docker-container
