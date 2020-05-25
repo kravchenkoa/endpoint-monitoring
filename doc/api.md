@@ -1,6 +1,6 @@
 # API
 - [Authorization](#authorization)
-- [Monitoring Results](#monitoring-results)
+- [API](#api)
 - [Invalid Requests](#invalid-requests)
 ##
 ## Authorization

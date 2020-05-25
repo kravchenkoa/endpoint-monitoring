@@ -14,7 +14,7 @@ Useful Information
 - Compile without tests and run `docker-compose up --build`
 - Let me know if something's wrong or not working as expected
 ##
-##Debrief
+## Debrief
 
 All in all an extremely educating task that took me a lot longer to "complete" than probably intended, but I've learned so much about every aspect of the task, as I was new to anything beyond a simple rest api with in memory db. Overall I've enjoyed the process even through many hardships and numerous failures.
 
